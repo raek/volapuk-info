@@ -1,0 +1,3 @@
+include volapuksite/config/deployment.ini_tmpl
+recursive-include volapuksite/public *
+recursive-include volapuksite/templates *
