@@ -57,6 +57,38 @@ html, body {
   text-decoration: none;
 }
 
+#breadcrumb {
+  background-color: #ccb;
+  color: #888;
+  padding: 3px;
+}
+
+#breadcrumb p {
+  width: 900px;
+  margin: 0 auto;
+}
+
+#breadcrumb a {
+  color: #888;
+  text-decoration: none;
+}
+
+#breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+#sidebar {
+  width: 300px;
+  float: right;
+  border-left: 1px solid #888;
+  border-right: 1px solid #888;
+  padding-left: 1em;
+}
+
+#sidebar ul {
+  list-style: none;
+}
+
 a {
   color: #e80;
   text-decoration: underline;
@@ -78,8 +110,12 @@ a {
   color: #08e;
 }
 
+table {
+  border: 1px solid #888;
+}
+
 td, th {
-  padding: 0.5em;
+  padding: 0.2em;
 }
 
 table.vertical th {
