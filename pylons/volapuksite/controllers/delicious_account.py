@@ -26,9 +26,10 @@ class DeliciousAccountController(BaseController):
             abort(405)
         username = request.params['username']
         password = request.params['password']
-        account = DeliciousAccount(username, password)
+        required_tags = request.params['required_tags']
+        account = DeliciousAccount(username, password, required_tags)
         meta.Session.add(account)
-        account.update()
+        account.clean_update()
         meta.Session.commit()
         redirect_to(action='view', id=account.id)
     
@@ -73,6 +74,7 @@ class DeliciousAccountController(BaseController):
         if request.method != 'POST':
             abort(405)
         account = meta.Session.query(DeliciousAccount).get(int(id))
+        account.clear()
         meta.Session.delete(account)
         meta.Session.commit()
         redirect_to(action='index')
