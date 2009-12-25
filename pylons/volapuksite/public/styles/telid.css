@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: #ddc;
+  font-family: DejaVu Sans, Bitstream Vera Sans, Helvetica, Verdana, Arial, sans-serif;
+  font-size: 11pt;
+}
+
+.title {
+  font-size: 24pt;
+}
+
+.desc {
+  font-size: 10pt;
+}
+
+.nav_link {
+  float: left;
+  width: 130px;
+  padding-top: 12px;
+  margin-right: 20px;
+  color: #ddc;
+}
+
+.logo {
+  width: 400px;
+  line-height: 100px;
+  float: left;
+  margin-left: 20px;
+  font-size: 38pt;
+}
+
+#header {
+  font-family: Georgia, serif;
+  /*font-family: Kontrapunkt, serif;*/
+  background-color: #111;
+  color: #ddc;
+  height: 100px;
+  border-bottom: solid 3px #e80;
+}
+
+#main {
+  clear: both;
+  background-color: #ddc;
+  width: 900px;
+  margin: 0 auto;
+}
+
+#footer {
+  clear: both;
+}
+
+#header a {
+  text-decoration: none;
+}
+
+a {
+  color: #e80;
+  text-decoration: underline;
+}
+
+#bal:hover .title {
+  color: #e80;
+}
+
+#tel:hover .title {
+  color: #f00;
+}
+
+#kil:hover .title {
+  color: #8e0;
+}
+
+#fol:hover .title {
+  color: #08e;
+}
+
+td, th {
+  padding: 0.5em;
+}
+
+table.vertical th {
+  text-align: right;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 16pt;
+  margin: 1em 0;
+}
+
+table form {
+  display: inline;
+}
+
+.submit {
+  text-align: right;
+}
+
