@@ -1,36 +1,54 @@
 """The application's model objects"""
+from datetime import datetime
 import sqlalchemy as sa
 from sqlalchemy import orm
 
 from volapuksite.model import meta
 
+from volapuksite.model.delicious_account import DeliciousAccount
+from volapuksite.model.bookmark import Bookmark
+from volapuksite.model.blog import Blog
+
 def init_model(engine):
     """Call me before using any of the tables or classes in the model"""
-    ## Reflected tables must be defined and mapped here
-    #global reflected_table
-    #reflected_table = sa.Table("Reflected", meta.metadata, autoload=True,
-    #                           autoload_with=engine)
-    #orm.mapper(Reflected, reflected_table)
-    #
     meta.Session.configure(bind=engine)
     meta.engine = engine
 
 
-## Non-reflected tables may be defined and mapped at module level
-#foo_table = sa.Table("Foo", meta.metadata,
-#    sa.Column("id", sa.types.Integer, primary_key=True),
-#    sa.Column("bar", sa.types.String(255), nullable=False),
-#    )
-#
-#class Foo(object):
-#    pass
-#
-#orm.mapper(Foo, foo_table)
+
+delicious_account_table = sa.Table('delicious_accounts', meta.metadata,
+    sa.Column('id', sa.types.Integer, primary_key=True),
+    sa.Column('username', sa.types.String(64), unique=True),
+    sa.Column('password', sa.types.String(64), nullable=False),
+    sa.Column('required_tags', sa.types.String(256), nullable=False),
+    sa.Column('last_updated', sa.types.DateTime, nullable=False))
+
+bookmark_table = sa.Table('bookmarks', meta.metadata,
+    sa.Column('account_id', sa.types.Integer, sa.ForeignKey('delicious_accounts.id'), nullable=False),
+    sa.Column('url', sa.types.String(2048), nullable=False),
+    sa.Column('url_md5', sa.types.String(32), nullable=False),
+    sa.Column('meta_md5', sa.types.String(32), nullable=False),
+    sa.Column('title', sa.types.String(256), nullable=False),
+    sa.Column('description', sa.types.String(2048), nullable=False),
+    sa.Column('tags', sa.types.String(256), nullable=False))
+
+blog_table = sa.Table('blogs', meta.metadata,
+    sa.Column('id', sa.types.Integer, primary_key=True),
+    sa.Column('feed_url', sa.types.String(2048), unique=True),
+    sa.Column('title', sa.types.String(64), nullable=False),
+    sa.Column('subtitle', sa.types.String(64), nullable=True),
+    sa.Column('author', sa.types.String(64), nullable=False),
+    sa.Column('last_updated', sa.types.DateTime, nullable=False))
+
+orm.mapper(DeliciousAccount, delicious_account_table)
+orm.mapper(Bookmark, bookmark_table,
+    primary_key=[bookmark_table.c.account_id, bookmark_table.c.url_md5],
+    properties={
+        'account': orm.relation(DeliciousAccount, backref='bookmarks')})
+orm.mapper(Blog, blog_table)
 
 
-## Classes for reflected tables may be defined here, but the table and
-## mapping itself must be done in the init_model function
-#reflected_table = None
-#
-#class Reflected(object):
-#    pass
+
+# These are the categories that appear on the learn page.
+LINK_CATEGORIES = ['course', 'dictionary', 'grammar', 'website', 'reading', 'history', 'media']
+
