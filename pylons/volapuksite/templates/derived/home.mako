@@ -5,6 +5,8 @@
       </p>
 </%def>
 <%def name="sidebar()">
+      <h2>Chat</h2>
+      <p><a href="http://widget.mibbit.com/?settings=b7979beaded7832bccd41c7594386dee&amp;server=irc.unilang.org&amp;channel=%23volapuk&amp;noServerNotices=true&amp;noServerMotd=true&amp;autoConnect=true">Chat in you browser</a></p>
       <h2>News</h2>
       <ul>
         % for tag in c.tags:

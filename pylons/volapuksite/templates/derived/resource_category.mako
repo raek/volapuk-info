@@ -3,7 +3,7 @@
       <p>
         <a href="${h.url_for('/')}">Volapük.info</a>
         → <a href="${h.url_for(controller='/learn')}">Learn</a>
-        → <b>Tag: ${c.tag}</b>
+        → <b>${c.category}</b>
       </p>
 </%def>
       <dl>

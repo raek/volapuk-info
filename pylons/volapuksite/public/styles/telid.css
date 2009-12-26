@@ -26,7 +26,7 @@ html, body {
 }
 
 .logo {
-  width: 400px;
+  width: 380px;
   line-height: 100px;
   float: left;
   margin-left: 20px;
@@ -46,7 +46,12 @@ html, body {
   clear: both;
   background-color: #ddc;
   width: 900px;
-  margin: 0 auto;
+  margin: 1em auto;
+}
+
+#inner {
+  float: left;
+  width: 540px;
 }
 
 #footer {
@@ -61,6 +66,7 @@ html, body {
   background-color: #ccb;
   color: #888;
   padding: 3px;
+  border-bottom: 1px solid #888;
 }
 
 #breadcrumb p {
@@ -78,11 +84,12 @@ html, body {
 }
 
 #sidebar {
-  width: 300px;
+  width: 260px;
   float: right;
-  border-left: 1px solid #888;
-  border-right: 1px solid #888;
-  padding-left: 1em;
+  border-left: 2px groove #888;
+  border-right: 2px groove #888;
+  padding: 0 1em;
+  /*background-color: #ccb;*/
 }
 
 #sidebar ul {

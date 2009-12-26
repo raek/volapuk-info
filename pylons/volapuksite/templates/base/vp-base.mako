@@ -36,10 +36,10 @@
       <div id="sidebar">
         ${self.sidebar()}
       </div>
+      <div id="inner">
       <h1>${c.title}</h1>
       ${self.body()}
-    </div>
-    <div id="footer">&nbsp;
+      </div>
     </div>
   </body>
 </html>
