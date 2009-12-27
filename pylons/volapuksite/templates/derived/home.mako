@@ -22,4 +22,14 @@
         % endfor
       </ul>
 </%def>
-      <p>A big long text</p>
+      <p>
+        Volapük is a constructed international language created in 1879–1880
+        by Johann Martin Schleyer, a Roman Catholic priest in Baden, Germany.
+        It was the first international auxiliary language that was widely
+        used.
+      </p>
+      <p>
+        This website is intended to be a resource for helping people learn
+        and use Volapük, and to introduce them to the Volapük speaking
+        community.
+      </p>
