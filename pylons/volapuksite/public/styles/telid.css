@@ -96,6 +96,10 @@ html, body {
   list-style: none;
 }
 
+#sidebar h2 {
+  text-align: center;
+}
+
 a {
   color: #e80;
   text-decoration: underline;
@@ -144,5 +148,15 @@ table form {
 
 .submit {
   text-align: right;
+}
+
+p {
+  margin: 1em 0;
+}
+
+.instructions {
+  padding: 0.5em;
+  border: 1px dashed #888;
+  text-align: center;
 }
 
