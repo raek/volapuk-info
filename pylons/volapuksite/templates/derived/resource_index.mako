@@ -2,12 +2,12 @@
 <%def name="breadcrumb()">
       <p>
         <a href="${h.url_for('/')}">Volapük.info</a>
-        → <b>Learn</b>
+        → <b>Learning Resources</b>
       </p>
 </%def>
       <p>
         When learning and using a language, three kinds of resources are
-        important:
+        often important:
       </p>
       <ol>
         <li><a href="${h.url_for(action='category', id='course')}">course material</a>

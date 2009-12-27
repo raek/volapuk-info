@@ -86,14 +86,35 @@ html, body {
 #sidebar {
   width: 260px;
   float: right;
-  border-left: 2px solid #888;
-  border-right: 2px solid #888;
+  border-left: 1px solid #888;
+  border-right: 1px solid #888;
   padding: 0 1em;
   /*background-color: #ccb;*/
 }
 
 #sidebar ul {
+  /*
+  list-style: square;
+  margin-left: 1em;
+  font-size: 12pt;
+  text-align: center;
+  */
+  margin-top: 1em;
   list-style: none;
+}
+
+#sidebar li {
+  /*
+  line-height: 150%;
+  */
+  text-align: center;
+}
+
+#sidebar li a {
+  display: block;
+  border: 1px dashed #888;
+  padding: 0.5em 0;
+  margin-bottom: 0.5em;
 }
 
 #sidebar h2 {
@@ -167,6 +188,7 @@ dt {
 }
 
 .instructions {
+  display: block;
   padding: 0.5em;
   border: 1px dashed #888;
   text-align: center;

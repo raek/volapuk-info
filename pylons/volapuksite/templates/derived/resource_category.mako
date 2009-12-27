@@ -2,8 +2,8 @@
 <%def name="breadcrumb()">
       <p>
         <a href="${h.url_for('/')}">Volapük.info</a>
-        → <a href="${h.url_for(controller='/learn')}">Learn</a>
-        → <b>${c.category}</b>
+        → <a href="${h.url_for(controller='/learn')}">Learning Resources</a>
+        → <b>${c.category.title}</b>
       </p>
 </%def>
       <dl>

@@ -11,8 +11,9 @@
         <strong>irc.unilang.org</strong> network, or chat directly in your
         browser!
       </p>
-      <p class="instructions">
-        <a href="http://embed.mibbit.com/?server=irc.unilang.org&channel=%23volapuk">
+      <p>
+        <a class="instructions"
+            href="http://embed.mibbit.com/?server=irc.unilang.org&channel=%23volapuk">
           Click here to join the chat!
         </a>
       </p>

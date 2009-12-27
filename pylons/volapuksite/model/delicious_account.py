@@ -4,6 +4,13 @@ from volapuksite.lib import delicious as d
 from volapuksite.model import meta
 from volapuksite.model.bookmark import Bookmark
 
+delicious_account_table = sa.Table('delicious_accounts', meta.metadata,
+    sa.Column('id', sa.types.Integer, primary_key=True),
+    sa.Column('username', sa.types.String(64), unique=True),
+    sa.Column('password', sa.types.String(64), nullable=False),
+    sa.Column('required_tags', sa.types.String(256), nullable=False),
+    sa.Column('last_updated', sa.types.DateTime, nullable=False))
+
 class DeliciousAccount(object):
     
     def __init__(self, username, password, required_tags=""):
