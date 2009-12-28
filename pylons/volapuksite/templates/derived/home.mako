@@ -1,7 +1,8 @@
 <%inherit file="/base/vp-base.mako" />
 <%def name="breadcrumb()">
       <p>
-        <b>Volapük.info</b>
+        <a href="${h.url_for('/')}">Volapük.info</a>
+        → <b>Home</b>
       </p>
 </%def>
 <%def name="sidebar()">
