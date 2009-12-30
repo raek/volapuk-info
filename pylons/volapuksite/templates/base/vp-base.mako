@@ -7,6 +7,7 @@
     <title>Volapük.info – ${c.title}</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="/styles/telid.css">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
     <script type="text/javascript">
       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
       document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
