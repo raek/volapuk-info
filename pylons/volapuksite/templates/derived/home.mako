@@ -14,15 +14,10 @@
       </p>
       <p>
         <a class="instructions"
-            href="http://embed.mibbit.com/?server=irc.unilang.org&channel=%23volapuk">
+            href="${h.url_for(controller='chat')}">
           Click here to join the chat!
         </a>
       </p>
-      <ul>
-        % for tag in c.tags:
-        <li><a href="${h.url_for(action='by_tag', id=tag)}">${tag}</a></li>
-        % endfor
-      </ul>
 </%def>
       <p>
         Volapük is a constructed international language created in 1879–1880
